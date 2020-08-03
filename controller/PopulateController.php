@@ -1,5 +1,9 @@
 <?php 
 
+namespace Controller;
+
+use Database;
+
 class PopulateController
 {
 
@@ -24,7 +28,7 @@ class PopulateController
             array_push($newXML, $valute);
         }   
 
-        $database = new Database("vanillaphpapp");
+        $database = new Database\Database("vanillaphpapp");
 
         foreach ($newXML as $value) {
             $database->insert("currency", [

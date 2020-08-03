@@ -6,9 +6,11 @@
     include('../controller/HomeController.php');
     include('../controller/PopulateController.php');
     
+    use Route;   
+    
     session_start();
 
-    $route = new Route();
+    $route = new Route\Route();
 
     $route->delegate();
 

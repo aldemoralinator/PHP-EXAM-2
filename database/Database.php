@@ -1,5 +1,9 @@
 <?php 
 
+namespace Database;
+
+use mysqli;
+
 class Database
 {
 

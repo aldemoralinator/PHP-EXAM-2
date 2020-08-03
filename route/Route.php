@@ -1,5 +1,9 @@
 <?php 
 
+namespace Route;
+
+use Controller;
+
 class Route
 {
 
@@ -40,25 +44,25 @@ class Route
     switch ($_SERVER['PHP_SELF']) {
 
       case '/index.php': {
-        $controller = new LoginController();
+        $controller = new Controller\LoginController();
         $controller->index();
         break;
       } 
 
       case '/index.php/currency': {
-        $controller = new HomeController();
+        $controller = new Controller\HomeController();
         $controller->index();
         break;
       }
 
       case '/index.php/populate': {
-        $controller = new PopulateController();
+        $controller = new Controller\PopulateController();
         $controller->index();
         break;
       }
 
       case '/index.php/logout': {
-        $controller = new LoginController();
+        $controller = new Controller\LoginController();
         $controller->logout();
         break;
       }
@@ -74,19 +78,19 @@ class Route
  
     switch ($_SERVER['PHP_SELF']) {
       case '/index.php': {
-        $controller = new LoginController();
+        $controller = new Controller\LoginController();
         $controller->authenticate();
         break;
       }
 
       case '/index.php/currency': {
-        $controller = new HomeController();
+        $controller = new Controller\HomeController();
         $controller->calculate();
         break;
       }
 
       case '/index.php/populate': {
-        $controller = new PopulateController();
+        $controller = new Controller\PopulateController();
         $controller->populateDatabase();
         break;
       }
